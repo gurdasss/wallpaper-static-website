@@ -1,0 +1,107 @@
+/* Reset default margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+}
+
+button {
+    width: 100vw;
+    height: 50px;
+
+}
+
+.full-width-button {
+    width: 100%;
+    /* Fills the wrapper */
+    padding: 16px;
+    font-size: 18px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.banner {
+    width: 100%;
+    /* makes it stretch full width of parent or window */
+    height: 500px;
+    /* adjust this to how tall you want it */
+    overflow: hidden;
+    /* hides the parts of the image that overflow */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    /* this is the magic: fills the box and crops */
+    object-fit: cover;
+    display: block;
+}
+
+.three-col-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.wall-card {
+    border: 10px solid #ddd;
+    border-radius: 32px;
+    overflow: hidden;
+
+}
+
+.card-preview {
+    width: 500px;
+    display: block;
+    border-top: 16px;
+    object-fit: cover;
+
+}
+
+.card-content {
+    text-align: justify;
+    padding: 10px;
+}
+
+.card-content h3 {
+    margin: 0 0 5px;
+}
+
+.card-content p {
+    margin: 0 0 5px;
+}
