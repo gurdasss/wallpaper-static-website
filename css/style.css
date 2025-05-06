@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    
 }
 
 header {
@@ -69,6 +70,7 @@ button {
     /* this is the magic: fills the box and crops */
     object-fit: cover;
     display: block;
+    mask-image: linear-gradient(black, transparent);
 }
 
 .three-col-grid {
@@ -82,7 +84,12 @@ button {
     border: 10px solid #ddd;
     border-radius: 32px;
     overflow: hidden;
+    transition: transform 0.2s ease;
+    }
 
+.wall-card:hover {
+    box-shadow: 0 0 40px 1px rgb(0, 3, 14);
+    transform: scale(1.05);
 }
 
 .card-preview {
