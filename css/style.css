@@ -1,17 +1,24 @@
-/* Reset default margins and paddings */
+/* =============================================
+   Reset default margins and paddings
+   ============================================= */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    
 }
 
+/* =============================================
+   Header styling
+   ============================================= */
 header {
     background: #333;
     color: #fff;
     padding: 10px 20px;
 }
 
+/* =============================================
+   Navigation link styling
+   ============================================= */
 nav a {
     color: #fff;
     margin: 0 10px;
@@ -23,7 +30,56 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Footer styling */
+/* =============================================
+   Banner styling with fade-in effect
+   ============================================= */
+.banner {
+    width: 100%;
+    /* full width of parent/window */
+    height: 500px;
+    /* banner height */
+    overflow: hidden;
+    /* hide overflowing parts */
+    position: relative;
+    /* for pseudo-elements if needed */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fill and crop without stretching */
+    display: block;
+    animation: fadeIn 2s ease-in-out;
+    /* fade-in on load */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =============================================
+   Section styling
+   ============================================= */
+section {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* =============================================
+   Footer styling
+   ============================================= */
 footer {
     background: #f1f1f1;
     text-align: center;
@@ -32,74 +88,69 @@ footer {
     color: #555;
 }
 
-/* Section styling */
-section {
-    padding: 20px;
-}
-
+/* =============================================
+   Button styling examples
+   ============================================= */
 button {
     width: 100vw;
+    /* full viewport width */
     height: 50px;
-
 }
 
 .full-width-button {
     width: 100%;
-    /* Fills the wrapper */
+    /* fills parent container */
     padding: 16px;
     font-size: 18px;
 }
 
-.section-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.banner {
-    width: 100%;
-    /* makes it stretch full width of parent or window */
-    height: 500px;
-    /* adjust this to how tall you want it */
-    overflow: hidden;
-    /* hides the parts of the image that overflow */
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    /* this is the magic: fills the box and crops */
-    object-fit: cover;
-    display: block;
-    mask-image: linear-gradient(black, transparent);
-}
-
+/* =============================================
+   Three-column grid for wallpapers
+   ============================================= */
 .three-col-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
 }
 
+/* =============================================
+   Wallpaper card styling with consistent aspect ratio
+   ============================================= */
 .wall-card {
     border: 10px solid #ddd;
+    /* card border */
     border-radius: 32px;
+    /* rounded corners */
     overflow: hidden;
+    /* crop any overflow */
     transition: transform 0.2s ease;
-    }
+    aspect-ratio: 16 / 9;
+        /* maintain 16:9 aspect ratio */
+        display: flex;
+        flex-direction: column;
+}
 
 .wall-card:hover {
     box-shadow: 0 0 40px 1px rgb(0, 3, 14);
     transform: scale(1.05);
 }
 
+/* =============================================
+   Card preview image styling
+   ============================================= */
 .card-preview {
-    width: 500px;
-    display: block;
-    border-top: 16px;
+    width: 100%;
+        /* fill card width */
+        height: 100%;
+        /* fill card height to maintain ratio */
     object-fit: cover;
-
+    /* crop and cover without stretch */
+        display: block;
 }
 
+/* =============================================
+   Card content styling
+   ============================================= */
 .card-content {
     text-align: justify;
     padding: 10px;
